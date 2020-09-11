@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(../img/mainburgerbackground2.jpg);
+	background-size: cover;
+	background-color: #343a40;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.headerimg {
+	width: 100%;
+	text-align: center;
+}
+
+header h1 {
+	color: whitesmoke;
+	font-size: 60px;
+	font-family: 'Lobster', cursive;
+}
+
+.addBurgerForm {
+	margin-bottom: 0px;
+}
+
+.addABurger {
+	color: whitesmoke;
+	font-family: 'Caveat', cursive;
+}
+
+.addABurger h2 {
+	font-size: 2.5rem;
+}
+
+.addBurgerInput {
+	border: transparent;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 1.5rem;
+}
+
+.addBurgerBTN {
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 1.5rem;
+}
+
+.addBurgerInst {
+	font-size: 1.5rem;
+}
