@@ -1,17 +1,29 @@
-const connection = require('./config/connection');
+var express = require('express');
 
-const query = `SELECT * FROM burgers;`;
-connection.query(query, function (err, res) {
-	if (err) throw err;
-	console.log(res[0]);
-	for (let i = 0; i < res.length; i++) {
-		console.log(
-			'ID: ' +
-				res[i].id +
-				' || Burger Name: ' +
-				res[i].burger_name +
-				' || Done: ' +
-				res[i].done
-		);
-	}
+var PORT = process.env.PORT || 8080;
+
+var app = express();
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static('public'));
+
+// Parse application body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Set Handlebars.
+var exphbs = require('express-handlebars');
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
+// Import routes and give the server access to them.
+var routes = require('./controllers/burgers_controller');
+
+app.use(routes);
+
+// Start our server so that it can begin listening to client requests.
+app.listen(PORT, function () {
+	// Log (server-side) when our server has started
+	console.log('Server listening on: http://localhost:' + PORT);
 });
