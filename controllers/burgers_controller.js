@@ -27,7 +27,11 @@ router.get('/api/burgers', function (req, res) {
 });
 
 router.post('/api/burgers', function (req, res) {
-	console.log(req.body);
+	// console.log('this is ' + req.body.name);
+	// return nothing if the input is blank
+	if (req.body.name === '') {
+		return;
+	}
 	burger.create(
 		['burger_name', 'done'],
 		[req.body.name, req.body.done],
