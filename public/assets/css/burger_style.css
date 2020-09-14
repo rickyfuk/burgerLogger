@@ -11,6 +11,10 @@ body {
 	background-repeat: no-repeat;
 }
 
+main {
+	padding-bottom: 100px;
+}
+
 .headerimg {
 	width: 100%;
 	text-align: center;
@@ -50,4 +54,50 @@ header h1 {
 
 .addBurgerInst {
 	font-size: 1.5rem;
+}
+
+.burgerlist {
+	color: whitesmoke;
+	border-right: 5px solid whitesmoke;
+}
+
+.burgerlist h3 {
+	text-decoration: underline;
+	margin-right: 10%;
+	line-height: 1.5;
+	font-size: 2rem;
+}
+
+.burgerlist table {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.doneBTN {
+	border-radius: 5px;
+}
+
+.devburgerlist {
+	color: whitesmoke;
+}
+
+.devburgerlist h3 {
+	text-decoration: underline;
+	margin-right: 10%;
+	line-height: 1.5;
+	font-size: 2rem;
+}
+
+.devburgerlist table {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.deleteBTN {
+	border-radius: 5px;
+}
+
+td {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }

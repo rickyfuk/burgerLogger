@@ -1,4 +1,4 @@
-<li>
+{{!-- <li>
 	{{name}}
 
 	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
@@ -6,4 +6,9 @@
 	</button>
 
 	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-</li>
+</li> --}}
+<tr>
+	<td>{{ id }}</td>
+	<td>{{ burger_name }}</td>
+	<td><button id="{{ id }}" class="deleteBTN btn-danger">Delete</button></td>
+</tr>

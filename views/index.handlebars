@@ -6,11 +6,85 @@
         </div>
     </div>
 </header>
+<main>
+    <!-- row 1: add a new burger -->
+    <div class="row">
+        <div class="addABurger text-center col-12">
+            <h2>Add a Burger</h2>
+            <form class="create-form">
+                <div class="addBurgerForm form-group">
+                    <input class="addBurgerInput" type="text" id="addburger" name="name"
+                        placeholder="enter a burger name" size="50" />
+                    <button class="addBurgerBTN btn-primary" type="submit">
+                        Add
+                    </button>
+                </div>
+                <div class="addBurgerInst">
+                    Input a burger name and click "Add" button to add a burger
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- row 2: the list of the burger on making / served -->
+    <div class="row">
+        <!-- the list for the burger is making -->
+        <div class="burgerlist col-4 offset-2 text-center mt-5">
+            <h3>Cooking Burger</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Burgers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each burgers}}
+                    {{#unless done}}
+                    {{> burger/burgerMaking}}
+                    {{/unless}}
+                    {{/each}}
+                    <!-- for each -->
+                    {{!-- <tr>
+                        <td>1</td>
+                        <td>cheeseburger</td>
+                        <td><button class="doneBTN btn-primary">Complete</button></td>
+                    </tr> --}}
+                    <!-- for each end -->
+                </tbody>
+            </table>
+        </div>
+        <!-- the list for the burger is served -->
+        <div class="devburgerlist col-4 text-center mt-5">
+            <h3>Served Burger</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Burgers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each burgers}}
+                    {{#if done}}
+                    {{> burger/burgerDone}}
+                    {{/if}}
+                    {{/each}}
+                    <!-- for each -->
+                    {{!-- <tr>
+                        <td>2</td>
+                        <td>Big Mac</td>
+                        <td><button class="deleteBTN btn-danger">Delete</button></td>
+                    </tr> --}}
+                    <!-- for each end -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{!-- <h1>Hello</h1>
 
-<h1>Hello</h1>
-
-<ul>
-    {{!-- {{#each burgers }} --}}
-    {{burgers.[0].burger_name}}
+    <ul>
+        {{!-- {{#each burgers }} --}}
+    {{!-- {{burgers.[0].burger_name}} --}}
     {{!-- {{/each}} --}}
-</ul>
+    {{!-- </ul> --}}
+</main>
