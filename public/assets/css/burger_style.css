@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 body {
@@ -44,6 +46,8 @@ header h1 {
 	padding: 10px 20px;
 	border-radius: 10px;
 	font-size: 1.5rem;
+	overflow: scroll;
+	max-width: 100%;
 }
 
 .addBurgerBTN {
@@ -100,4 +104,12 @@ header h1 {
 td {
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+/* For small screens (e.g. phone) */
+@media only screen and (max-width: 640px) {
+	.burgerlist {
+		color: whitesmoke;
+		border-right: none;
+	}
 }
